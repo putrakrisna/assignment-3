@@ -1,0 +1,35 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
+import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
+const useStyles = makeStyles({
+  btnTest: {
+    color: "red",
+    background: "blue",
+  },
+});
+const layout = (props) => {
+  const styles = useStyles();
+  const { children } = props;
+  const router = useRouter();
+  return (
+    <main>
+      <div className="header">
+        <ul className="headerlink">
+          <li className="home">
+            <Link href="/">
+              <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEyOCAxMjgiIGhlaWdodD0iMTI4cHgiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDEyOCAxMjgiIHdpZHRoPSIxMjhweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGcgaWQ9IkxheWVyXzIiLz48ZyBpZD0iTGF5ZXJfMSI+PGc+PHBvbHlsaW5lIGZpbGw9Im5vbmUiIHBvaW50cz0iICAgIDIzLjc0Nyw1NS43MjEgNjQuMzA0LDI2LjU3NSAxMDQuMjUzLDU1LjcyMSAgICIgc3Ryb2tlPSIjMjMxRjIwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHBhdGggZD0iICAgIE01Mi43MjcsOTguODk2VjczLjUwOWMwLDAsMy4zNDItNS44NDMsMTAuNDI4LTUuODQzYzcuMDg0LDAsMTAuNDI1LDUuODQzLDEwLjQyNSw1Ljg0M3YyNS4zODciIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIzMUYyMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iNSIvPjxwb2x5bGluZSBmaWxsPSJub25lIiBwb2ludHM9IiAgICAzOC41ODgsNDIuOTMgMzguNTg4LDI2LjU3NSA0Ny42ODQsMjYuNTc1IDQ3LjY4NCwzNy4xOTIgICAiIHN0cm9rZT0iIzIzMUYyMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iNSIvPjxwYXRoIGQ9IiAgICBNOTguNzksNTEuNzM1djQyLjg2N2MwLDMuNzY5LTMuMDU0LDYuODIyLTYuODIyLDYuODIySDM2LjAzMmMtMy43NjksMC02LjgyMi0zLjA1NC02LjgyMi02LjgyMlY1MS43OTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIzMUYyMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iNSIvPjwvZz48L2c+PC9zdmc+"/>
+            </Link>
+          </li>
+          <li className="minicart">
+            <Link href="/cart">
+            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI2IDI2IiBpZD0i0KHQu9C+0LlfMSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMjYgMjYiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yMi42ODM1OTM4LDcuMTM1NzQyMmMtMC4wMjUzOTA2LTAuMzk1NTA3OC0wLjM1MjUzOTEtMC43MDMxMjUtMC43NDkwMjM0LTAuNzAzMTI1aC0zLjk2OTcyNjZWNS4yNTk3NjU2ICBDMTcuOTY0ODQzOCwyLjkxMTEzMjgsMTUuNzM3MzA0NywxLDEzLDFTOC4wMzUxNTYzLDIuOTExMTMyOCw4LjAzNTE1NjMsNS4yNTk3NjU2djEuMTcyODUxNkg0LjA2NTQyOTcgIGMtMC4zOTY0ODQ0LDAtMC43MjM2MzI4LDAuMzA3NjE3Mi0wLjc0OTAyMzQsMC43MDMxMjVMMi4yNTA5NzY2LDI0LjIwMzEyNSAgYy0wLjAxMjY5NTMsMC4yMDcwMzEzLDAuMDYwNTQ2OSwwLjQwOTE3OTcsMC4yMDIxNDg0LDAuNTYwNTQ2OUMyLjU5NDcyNjYsMjQuOTE0MDYyNSwyLjc5Mjk2ODgsMjUsMywyNWgyMCAgYzAuMjA3MDMxMywwLDAuNDA1MjczNC0wLjA4NTkzNzUsMC41NDY4NzUtMC4yMzYzMjgxYzAuMTQxNjAxNi0wLjE1MTM2NzIsMC4yMTQ4NDM4LTAuMzUzNTE1NiwwLjIwMjE0ODQtMC41NjA1NDY5ICBMMjIuNjgzNTkzOCw3LjEzNTc0MjJ6IE05LjUzNTE1NjMsNS4yNTk3NjU2QzkuNTM1MTU2MywzLjczODI4MTMsMTEuMDg5ODQzOCwyLjUsMTMsMi41czMuNDY0ODQzOCwxLjIzODI4MTMsMy40NjQ4NDM4LDIuNzU5NzY1NiAgdjEuMTcyODUxNkg5LjUzNTE1NjNWNS4yNTk3NjU2eiBNOC4wMzUxNTYzLDcuOTMyNjE3MnYxLjYyODkwNjNjMCwwLjQxNDA2MjUsMC4zMzU5Mzc1LDAuNzUsMC43NSwwLjc1czAuNzUtMC4zMzU5Mzc1LDAuNzUtMC43NSAgVjcuOTMyNjE3Mmg2LjkyOTY4NzV2MS42Mjg5MDYzYzAsMC40MTQwNjI1LDAuMzM1OTM3NSwwLjc1LDAuNzUsMC43NXMwLjc1LTAuMzM1OTM3NSwwLjc1LTAuNzVWNy45MzI2MTcyaDMuMjY0NjQ4NCAgbDAuNjQ5ODQxMywxMC40MDAzOTA2SDQuMTIwNjY2NUw0Ljc3MDUwNzgsNy45MzI2MTcySDguMDM1MTU2M3ogTTMuNzk3ODUxNiwyMy41bDAuMjYwMzc2LTQuMTY2OTkyMmgxNy44ODM1NDQ5TDIyLjIwMjE0ODQsMjMuNSAgSDMuNzk3ODUxNnoiIGZpbGw9IiMxRDFEMUIiLz48L3N2Zz4="/>
+            </Link>
+          </li>
+          </ul>
+      </div>
+      <div className="container">{children}</div>
+    </main>
+  );
+};
+export default layout;
